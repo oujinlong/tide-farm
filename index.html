@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>潮汐农场 · 原型</title>
+    <style>
+      body { margin: 0; background: #f2f5ef; color: #172c27; font: 1rem/1.5 system-ui, sans-serif; }
+      main { max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+      h1, p { margin: 0 0 0.75rem; }
+      canvas { display: block; width: 100%; height: auto; border-radius: 0.5rem; }
+      button { margin: 1rem 0 0.5rem; padding: 0.45rem 0.8rem; font: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>潮汐农场</h1>
+      <p>第 1 天 · 今晚水位 1</p>
+      <p>点地图里的旧闸或使用下方按钮，预览海水能流到哪里。</p>
+      <canvas id="farm" role="img" aria-label="16 列、12 行农场地图。海水在西侧，海稻在旧闸后，番茄在东侧。"></canvas>
+      <button id="gate" type="button" aria-pressed="false">切换旧闸</button>
+      <p id="status" role="status"></p>
+      <p>图例：浅蓝为今晚淹水区域，黄色为海稻，红色为番茄。</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
